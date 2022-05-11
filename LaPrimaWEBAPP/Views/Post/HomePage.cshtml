@@ -1,0 +1,53 @@
+﻿@model List<Pizze> 
+
+
+ <div class=container>
+	  <h2>
+		 MENU 
+	  </h2>
+<div class="row">
+			<div class="col-md-4">
+				<div class="card shadow-sm text-center">
+					<div class="user-pic">
+						<img src="~/Nuova cartella/Pizza-alla-marinara.jpg" class="img-fluid" alt="User Pic" width="370"height="300" />
+					</div>
+@if(Model.Count()==0)
+{
+           <h4> Non sono presenti Post </h4>
+        }
+		else 
+		{
+            
+        
+					<h4>Marinara</h4>
+					
+					<hr>
+					<p> pomodoro, aglio, origano e olio Evo
+                    </p>
+					<hr>
+  <button type="button" class="btn btn-outline-primary">Normale: <b>3,50€</b>
+  <button type="button" class="btn btn-outline-primary">Con mozzarrella senza lattosio: <b>+1,50€</b>
+  <button type="button" class="btn btn-outline-primary">senza Glutine <b>+1,50€</b>
+				</div>
+			@foreach(Pizze postDellaLista in Model)		
+		{
+
+			<div class="col-md-4">
+				<div class="card shadow-sm text-center">
+					<div class="user-pic">
+						<img src="~/Nuova cartella/pizza-margherita.jpg" class="img-fluid" alt="User Pic"  width="340" height="300" />
+					</div> 
+					<h4>Margherita</h4>
+					<hr>
+					<p>pomodoro San Marzano, mozzarella fiordilatte di Agerola, basilico, olio extravergine d'oliva e parmigiano.</p>
+					<hr>
+  <button type="button" class="btn btn-outline-primary">Normale: <b>4€</b>
+  <button type="button" class="btn btn-outline-primary">Con mozzarrella senza lattosio: <b>+1,50€</b>
+  <button type="button" class="btn btn-outline-primary">senza Glutine <b>+1,50€</b>
+</div>
+			</div>
+	
+
+        } 
+		
+}
